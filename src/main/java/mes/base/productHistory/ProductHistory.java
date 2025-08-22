@@ -38,13 +38,13 @@ public class ProductHistory {
     @JsonProperty("action")
     private ActionType action;
 
-    @Column(nullable = false)
-    @JsonProperty("userId")
-    private String userId;
-
-    @Column(nullable = false)
-    @JsonProperty("userName")
-    private String userName;
+//    @Column(nullable = false)
+//    @JsonProperty("userId")
+//    private String userId;
+//
+//    @Column(nullable = false)
+//    @JsonProperty("userName")
+//    private String userName;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -54,5 +54,5 @@ public class ProductHistory {
 
     @Column(nullable = false)
     @JsonProperty("reason")
-    private String reason;
+    private String reason = "시스템 자동 생성";;
 }

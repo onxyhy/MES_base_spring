@@ -16,6 +16,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -55,4 +56,19 @@ public class Product {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    @Column(nullable = true)
+    private String description;
+
+    @Column(nullable = true)
+    private String specifications;
+
+    @Column(nullable = true)
+    private String notes;
+
+    @Column(nullable = true)
+    private String idCreate;
+
+    @Column(nullable = true)
+    private String idUpdate;
 }
